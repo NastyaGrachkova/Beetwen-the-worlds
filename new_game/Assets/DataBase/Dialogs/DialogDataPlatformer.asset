@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1419410cd88c8146acb123290ea04a8, type: 3}
+  m_Name: DialogDataPlatformer
+  m_EditorClassIdentifier: 
+  DialogElements:
+  - PortretSprite: {fileID: -1955448553306655712, guid: 835f064295a280142b27429d7f1108fb, type: 3}
+    DialogText: Hello!
+  - PortretSprite: {fileID: -1291202924252101130, guid: 4d81b1160c6d6934e9c7bb7fe24afae7, type: 3}
+    DialogText: Good afternoon!

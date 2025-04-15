@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogElements:
   - PortretSprite: {fileID: -1955448553306655712, guid: 835f064295a280142b27429d7f1108fb, type: 3}
-    DialogText: Hello!
+    DialogText: 'Hello! '
   - PortretSprite: {fileID: -1291202924252101130, guid: 4d81b1160c6d6934e9c7bb7fe24afae7, type: 3}
-    DialogText: Good afternoon!
+    DialogText: 'Good afternoon! '

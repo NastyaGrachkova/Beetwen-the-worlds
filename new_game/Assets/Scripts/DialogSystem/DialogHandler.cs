@@ -16,14 +16,44 @@ public class DialogHandler
 
     public void StartDialog()
     {
-        _dialogView.Scip.onClick.AddListener(() => ShowElementFromDialogData(_dialogData.DialogElements[_dialogIndex]));
-        ShowElementFromDialogData(_dialogData.DialogElements[_dialogIndex]);
+        _dialogView.ShowDialogPanel();
+        _dialogIndex = 0;
+        _dialogView.Scip.onClick.RemoveAllListeners();
+
+        _dialogView.Scip.onClick.AddListener(() =>
+        {
+            if (_dialogIndex < _dialogData.DialogElements.Count)
+                ShowElementFromDialogData(_dialogData.DialogElements[_dialogIndex], _dialogData.DialogElements.Count);
+            else
+                _dialogView.PutAwayDialogPanel();
+        });
+
+        ShowElementFromDialogData(_dialogData.DialogElements[_dialogIndex], _dialogData.DialogElements.Count);
+    }
+    public void StartDialog(DialogData dialogData)
+    {
+        _dialogView.ShowDialogPanel();
+        _dialogIndex = 0;
+        _dialogView.Scip.onClick.RemoveAllListeners();
+        _dialogView.Scip.onClick.AddListener(() =>
+        {
+            if (_dialogIndex < dialogData.DialogElements.Count)
+                ShowElementFromDialogData(dialogData.DialogElements[_dialogIndex], dialogData.DialogElements.Count);
+            else
+                _dialogView.PutAwayDialogPanel();
+        });
+        ShowElementFromDialogData(dialogData.DialogElements[_dialogIndex], dialogData.DialogElements.Count);
     }
 
-    private void ShowElementFromDialogData(DialogElements dialogElements)
+    private void ShowElementFromDialogData(DialogElements dialogElements, int dialogElementsLength)
     {
-        _dialogView.Portret.sprite = dialogElements.PortretSprite;
-        //_dialogView.Text.text = dialogElements.DialogText;
+        if (dialogElements.PortretSprite != null)
+        {
+            _dialogView.Portret.gameObject.SetActive(true);
+            _dialogView.Portret.sprite = dialogElements.PortretSprite;
+        }
+        else 
+            _dialogView.Portret.gameObject.SetActive(false);
         _dialogView.StartCoroutine(TypeText(dialogElements.DialogText));
         _dialogIndex++;
     }
@@ -36,6 +66,6 @@ public class DialogHandler
             _dialogView.Text.text += FullText[i];
             yield return _waitForSeconds;
         }
-        
+
     }
 }

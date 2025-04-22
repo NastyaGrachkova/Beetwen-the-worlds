@@ -2,16 +2,15 @@ using UnityEngine;
 
 public class SpeedBooster : Item
 {
+    
     public override void PickUpItem()
     {
-        Debug.Log("Increase speed");
+        if (PlayerStats != null)
+        {
+            PlayerStats.ChangeSpeedMovement(IncreaseValue, IncreaseTimer);
+            GameObject.Destroy(gameObject);
+        }
     }
+    
 }
 
-public class DamageBooster : Item
-{
-    public override void PickUpItem()
-    {
-        Debug.Log("Increase damage");
-    }
-}

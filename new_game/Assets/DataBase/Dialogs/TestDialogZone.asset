@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestDialogZone
   m_EditorClassIdentifier: 
   DialogElements:
-  - PortretSprite: {fileID: -1955448553306655712, guid: 835f064295a280142b27429d7f1108fb, type: 3}
+  - PortretSprite: {fileID: -2576023137440582333, guid: a96a6615cde513449946a878c8244645, type: 3}
     DialogText: fctfyyy hbgugh
   - PortretSprite: {fileID: 0}
     DialogText: fbjbhbijo ooooooo

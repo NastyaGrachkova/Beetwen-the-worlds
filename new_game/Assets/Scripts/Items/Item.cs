@@ -1,17 +1,16 @@
+using System.Collections;
 using UnityEngine;
 
 public abstract class Item : MonoBehaviour
 {
     [SerializeField] protected float IncreaseValue;
-    [SerializeField] protected float IncreaseTimer;
-    protected PlayerStats PlayerStats;
-    public abstract void PickUpItem();
+    [SerializeField] protected float IncreaseDuration;
+    public abstract IEnumerator PickUpItem(PlayerStats player);
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out PlayerStats player))
         {
-            PlayerStats = player;
-            PickUpItem();
+            StartCoroutine(PickUpItem(player));
         }
     }
 }

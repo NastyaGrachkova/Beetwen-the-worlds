@@ -24,7 +24,6 @@ public class Settings : MonoBehaviour
 
     public void ChangeMasterVolume(float volume)
     {
-        Debug.Log("er");
         float mixerVolume = Mathf.Lerp(-80, 0, volume);
         _audioMixer.SetFloat("Master", mixerVolume);
         _masterSave.SaveData.MasterVolume = volume;

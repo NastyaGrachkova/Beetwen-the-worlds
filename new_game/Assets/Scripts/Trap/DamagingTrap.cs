@@ -1,16 +1,15 @@
+using System.Collections;
 using UnityEngine;
 
-public class DamagingTrap : MonoBehaviour
+public class DamagingTrap : Trap
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private int _damageValue;
+    protected override IEnumerator ActivateTrap(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.transform.TryGetComponent(out IDamageAble idamagable) && collision.gameObject.layer == 6)
+        {
+            idamagable.GetDamage(_damageValue);
+        }
+        yield return null;
     }
 }

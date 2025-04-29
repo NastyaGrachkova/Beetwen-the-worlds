@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Zenject;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player_movement : MonoBehaviour
@@ -14,7 +16,19 @@ public class Player_movement : MonoBehaviour
     private Animator _anim;
     private bool _isOnGround = true;
     private bool _isUseDoubleJump = false;
+    private EventBus _eventBus;
+    private bool _isDialogActivated;
 
+    [Inject]
+    void Constract(EventBus eventBus)
+    {
+        _eventBus = eventBus;
+    }
+    private void Awake()
+    {
+        _eventBus.OnDialogStarted += DialogStarted;
+        _eventBus.OnDialogEnded += DialogEnded;
+    }
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -22,8 +36,12 @@ public class Player_movement : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
+    private void DialogStarted() => _isDialogActivated = true;
+    private void DialogEnded() => _isDialogActivated = false;
     void Update()
     {
+        if (_isDialogActivated == true) return;
+
         float moveInput = Input.GetAxis("Horizontal");
 
         if (_rigidbody2D.linearVelocity.y == 0)

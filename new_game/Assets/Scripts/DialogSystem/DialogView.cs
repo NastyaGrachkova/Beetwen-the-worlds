@@ -10,7 +10,7 @@ public class DialogView : MonoBehaviour
     public TextMeshProUGUI Text;
     public Button Scip;
     public RectTransform DialogBackground;
-    private Vector3 _hidenPanelPosition; 
+    private Vector3 _hidenPanelPosition;
     public void ShowDialogPanel()
     {
         _hidenPanelPosition = DialogBackground.anchoredPosition;
@@ -22,3 +22,6 @@ public class DialogView : MonoBehaviour
         DialogBackground.DOAnchorPos(_hidenPanelPosition, 1f).SetEase(Ease.InOutSine);
     }
 }
+
+
+

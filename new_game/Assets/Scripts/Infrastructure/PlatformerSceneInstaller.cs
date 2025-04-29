@@ -7,6 +7,10 @@ public class PlatformerSceneInstaller : MonoInstaller
     [SerializeField] private DialogData _dialogData;
     public override void InstallBindings()
     {
+        Container.Bind<EventBus>()
+            .FromNew()
+            .AsSingle()
+            .NonLazy();
         Container.Bind<DialogHandler>()
             .FromNew()
             .AsSingle()

@@ -5,14 +5,26 @@ public class Portal : MonoBehaviour
 {
     // Имя сцены, на которую нужно перейти
     public string nextSceneName = "Hub";
+    private const int totalCoins = 3; // Общее количество монет
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Проверяем, что объект, который вошел в триггер, - это игрок
         if (collision.CompareTag("Player"))
         {
-            // Загружаем следующую сцену
-            SceneManager.LoadScene(nextSceneName);
+            PlayerStats playerStats = collision.GetComponent<PlayerStats>();
+            if (playerStats != null)
+            {
+                if (playerStats.CoinCount >= totalCoins)
+                {
+                    // Загружаем следующую сцену, если собраны все монеты
+                    SceneManager.LoadScene(nextSceneName);
+                }
+                else
+                {
+                    //Debug.Log("Соберите все монеты, чтобы открыть портал!"); // Сообщение для игрока
+                }
+            }
         }
     }
 }

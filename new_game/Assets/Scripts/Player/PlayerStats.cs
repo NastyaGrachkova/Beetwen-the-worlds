@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour, IDamageAble
 {
     public int Health;
 
-    [SerializeField] private Slider _slider;
+    [SerializeField] public Slider _slider;
 
     public float JumpForce;
     public float SpeedMovement;

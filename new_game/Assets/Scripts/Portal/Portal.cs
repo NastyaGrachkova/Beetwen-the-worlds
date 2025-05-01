@@ -5,7 +5,7 @@ public class Portal : MonoBehaviour
 {
     // Имя сцены, на которую нужно перейти
     public string nextSceneName = "Hub";
-    private const int totalCoins = 3; // Общее количество монет
+    [SerializeField] private int totalCoins; // Общее количество монет
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

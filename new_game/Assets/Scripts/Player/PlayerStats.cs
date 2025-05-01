@@ -19,11 +19,23 @@ public class PlayerStats : MonoBehaviour, IDamageAble
 
     [SerializeField] private GameObject gameOverImage;
 
+    // Ссылка на текстовый элемент для отображения счётчика монет
+    [SerializeField] private TMPro.TextMeshProUGUI coinText; 
+
     // Метод для добавления монет
     public void AddCoins(int amount)
     {
         CoinCount += amount;
-        Debug.Log("Монет: " + CoinCount); // Для проверки в консоли
+        UpdateCoinText(); // Обновляем текст при добавлении монет
+        Debug.Log("Coins: " + CoinCount); // Для проверки в консоли
+    }
+
+    private void UpdateCoinText()
+    {
+        if (coinText != null)
+        {
+            coinText.text = "Coins: " + CoinCount; // Обновляем текст
+        }
     }
 
     public void GetDamage(int damageValue)

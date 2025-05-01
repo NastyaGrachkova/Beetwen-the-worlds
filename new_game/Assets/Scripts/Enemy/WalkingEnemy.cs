@@ -37,61 +37,61 @@
 //    }
 //}
 
+using System.Collections;
 using UnityEngine;
 
-public class PatrollingEnemy : EnemyStats
+public class WalkingEnemy : EnemyStats
 {
     public float patrolSpeed = 2f; // Скорость патрулирования
-    public Transform[] patrolPoints; // Точки патрулирования
-    private int currentPatrolIndex; // Индекс текущей точки патрулирования
 
     [SerializeField] private int _damageAmount = 10; // Количество урона, наносимого игроку
-    public float attackRange = 1.5f; // Дистанция, на которой враг может атаковать игрока
     public float attackCooldown = 1f; // Время между атаками
-    private float lastAttackTime; // Время последней атаки
+    [SerializeField] private Transform _pointToMove;
 
-    private void Start()
-    {
-        currentPatrolIndex = 0; // Начинаем с первой точки патрулирования
-    }
 
     private void Update()
     {
         Patrol();
     }
 
+    public void SwapPosition(Transform nextPositionToMove)
+    {
+        _pointToMove = nextPositionToMove;
+    }
+
     private void Patrol()
     {
-        if (patrolPoints.Length == 0) return;
+        if (_pointToMove == null) return;
 
         // Перемещение к текущей точке патрулирования
-        Transform targetPoint = patrolPoints[currentPatrolIndex];
-        transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, patrolSpeed * Time.deltaTime);
-
-        // Проверяем, достигли ли мы точки
-        if (Vector3.Distance(transform.position, targetPoint.position) < 0.1f)
-        {
-            // Переходим к следующей точке
-            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
-        }
+        transform.position = Vector3.MoveTowards(transform.position, _pointToMove.position, patrolSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Проверяем, есть ли у объекта компонент PlayerStats
-        if (collision.TryGetComponent(out PlayerStats player))
+        if (collision.TryGetComponent(out IDamageAble player) && collision.gameObject.layer == 6)
         {
-            Attack(player);
+            Debug.Log("Атака");
+            StartCoroutine(Attack(player));
         }
     }
 
-    private void Attack(PlayerStats player)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (Time.time - lastAttackTime >= attackCooldown)
+        if (collision.TryGetComponent(out PlayerStats player))
         {
+            StopAllCoroutines();
+        }
+    }
+
+    private IEnumerator Attack(IDamageAble player)
+    {
+        while (true) 
+        {
+            Debug.Log("Атака1");
             player.GetDamage(_damageAmount); // Наносим урон игроку
-            lastAttackTime = Time.time; // Обновляем время последней атаки
-            Debug.Log("Враг атаковал игрока. Урон: " + _damageAmount);
+            yield return new WaitForSeconds(attackCooldown);
         }
     }
 }

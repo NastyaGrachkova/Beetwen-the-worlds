@@ -915,8 +915,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.28, y: 0.94}
+    newSize: {x: 1.28, y: 0.94}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -946,7 +946,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: a32525048df3f5f41baa50e5f84760af, type: 3}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -967,15 +967,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53a92b61ea7dbdb45a0b3db4c15903c6, type: 3}
+  m_Sprite: {fileID: 3399250985731408391, guid: 53a92b61ea7dbdb45a0b3db4c15903c6, type: 3}
   m_Color: {r: 0.9921569, g: 0.454902, b: 0.454902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 0.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &132127792
@@ -1024,7 +1024,7 @@ GameObject:
   - component: {fileID: 149181660}
   - component: {fileID: 149181659}
   - component: {fileID: 149181658}
-  - component: {fileID: 149181657}
+  - component: {fileID: 149181661}
   m_Layer: 7
   m_Name: BreakableTrap (1)
   m_TagString: Untagged
@@ -1032,20 +1032,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &149181657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149181656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &149181658
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1167,6 +1153,19 @@ Transform:
   - {fileID: 1686498230}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &149181661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149181656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &151360239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1311,7 @@ GameObject:
   - component: {fileID: 180087710}
   - component: {fileID: 180087713}
   - component: {fileID: 180087712}
-  - component: {fileID: 180087711}
+  - component: {fileID: 180087714}
   m_Layer: 7
   m_Name: BreakableTrap (5)
   m_TagString: Untagged
@@ -1335,20 +1334,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 720301224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &180087711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180087709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &180087712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1450,6 +1435,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &180087714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180087709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &195855521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1555,7 @@ GameObject:
   - component: {fileID: 205651481}
   - component: {fileID: 205651484}
   - component: {fileID: 205651483}
-  - component: {fileID: 205651482}
+  - component: {fileID: 205651485}
   m_Layer: 7
   m_Name: BreakableTrap (2)
   m_TagString: Untagged
@@ -1580,20 +1578,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 720301224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &205651482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205651480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &205651483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1695,6 +1679,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &205651485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205651480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &213214727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,7 +1703,7 @@ GameObject:
   - component: {fileID: 213214728}
   - component: {fileID: 213214731}
   - component: {fileID: 213214730}
-  - component: {fileID: 213214729}
+  - component: {fileID: 213214732}
   m_Layer: 7
   m_Name: BreakableTrap (2)
   m_TagString: Untagged
@@ -1729,20 +1726,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 149181660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &213214729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213214727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &213214730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1844,6 +1827,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &213214732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213214727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &271254538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,11 +2495,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 336388029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
+  Health: 50
 --- !u!1 &365330993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,7 +3290,7 @@ GameObject:
   - component: {fileID: 458300273}
   - component: {fileID: 458300276}
   - component: {fileID: 458300275}
-  - component: {fileID: 458300274}
+  - component: {fileID: 458300277}
   m_Layer: 7
   m_Name: BreakableTrap (5)
   m_TagString: Untagged
@@ -3318,20 +3313,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 945968257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &458300274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458300272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &458300275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3433,6 +3414,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &458300277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458300272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &462255088
 GameObject:
   m_ObjectHideFlags: 0
@@ -4010,7 +4004,7 @@ GameObject:
   - component: {fileID: 483490750}
   - component: {fileID: 483490753}
   - component: {fileID: 483490752}
-  - component: {fileID: 483490751}
+  - component: {fileID: 483490754}
   m_Layer: 7
   m_Name: BreakableTrap (1)
   m_TagString: Untagged
@@ -4033,20 +4027,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 336388032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &483490751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483490749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &483490752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4148,6 +4128,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &483490754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483490749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &498699978
 GameObject:
   m_ObjectHideFlags: 0
@@ -4906,7 +4899,7 @@ Transform:
   m_GameObject: {fileID: 567917220}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.37423623, y: 0.00999999, z: 0}
+  m_LocalPosition: {x: 0.37423623, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5541,7 +5534,7 @@ GameObject:
   - component: {fileID: 643671169}
   - component: {fileID: 643671172}
   - component: {fileID: 643671171}
-  - component: {fileID: 643671170}
+  - component: {fileID: 643671173}
   m_Layer: 7
   m_Name: BreakableTrap (3)
   m_TagString: Untagged
@@ -5564,20 +5557,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 149181660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &643671170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643671168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &643671171
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5679,6 +5658,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &643671173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643671168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &646254794
 GameObject:
   m_ObjectHideFlags: 0
@@ -6160,7 +6152,7 @@ GameObject:
   - component: {fileID: 720301224}
   - component: {fileID: 720301223}
   - component: {fileID: 720301222}
-  - component: {fileID: 720301221}
+  - component: {fileID: 720301225}
   m_Layer: 7
   m_Name: BreakableTrap (2)
   m_TagString: Untagged
@@ -6168,20 +6160,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &720301221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720301220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &720301222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6303,6 +6281,19 @@ Transform:
   - {fileID: 180087710}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &720301225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720301220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &721197358
 GameObject:
   m_ObjectHideFlags: 0
@@ -7359,7 +7350,7 @@ GameObject:
   - component: {fileID: 945968257}
   - component: {fileID: 945968256}
   - component: {fileID: 945968255}
-  - component: {fileID: 945968254}
+  - component: {fileID: 945968258}
   m_Layer: 7
   m_Name: BreakableTrap (3)
   m_TagString: Untagged
@@ -7367,20 +7358,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &945968254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945968253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &945968255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7502,6 +7479,19 @@ Transform:
   - {fileID: 458300273}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &945968258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945968253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &991204670
 GameObject:
   m_ObjectHideFlags: 0
@@ -8691,7 +8681,7 @@ GameObject:
   - component: {fileID: 1181693830}
   - component: {fileID: 1181693833}
   - component: {fileID: 1181693832}
-  - component: {fileID: 1181693831}
+  - component: {fileID: 1181693834}
   m_Layer: 7
   m_Name: BreakableTrap (3)
   m_TagString: Untagged
@@ -8714,20 +8704,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 336388032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1181693831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181693829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1181693832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8829,6 +8805,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1181693834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181693829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1193737319
 GameObject:
   m_ObjectHideFlags: 0
@@ -8840,7 +8829,7 @@ GameObject:
   - component: {fileID: 1193737320}
   - component: {fileID: 1193737323}
   - component: {fileID: 1193737322}
-  - component: {fileID: 1193737321}
+  - component: {fileID: 1193737324}
   m_Layer: 7
   m_Name: BreakableTrap (1)
   m_TagString: Untagged
@@ -8863,20 +8852,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 149181660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1193737321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193737319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1193737322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8978,6 +8953,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1193737324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193737319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1194350915
 GameObject:
   m_ObjectHideFlags: 0
@@ -9531,7 +9519,7 @@ GameObject:
   - component: {fileID: 1267564292}
   - component: {fileID: 1267564295}
   - component: {fileID: 1267564294}
-  - component: {fileID: 1267564293}
+  - component: {fileID: 1267564296}
   m_Layer: 7
   m_Name: BreakableTrap (3)
   m_TagString: Untagged
@@ -9554,20 +9542,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 945968257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1267564293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267564291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1267564294
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9669,6 +9643,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1267564296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267564291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1308922470
 GameObject:
   m_ObjectHideFlags: 0
@@ -10376,7 +10363,7 @@ GameObject:
   - component: {fileID: 1360507731}
   - component: {fileID: 1360507734}
   - component: {fileID: 1360507733}
-  - component: {fileID: 1360507732}
+  - component: {fileID: 1360507735}
   m_Layer: 7
   m_Name: BreakableTrap (3)
   m_TagString: Untagged
@@ -10399,20 +10386,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 720301224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1360507732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360507730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1360507733
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10514,6 +10487,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1360507735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360507730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1370792627
 GameObject:
   m_ObjectHideFlags: 0
@@ -11354,7 +11340,7 @@ GameObject:
   - component: {fileID: 1509100303}
   - component: {fileID: 1509100306}
   - component: {fileID: 1509100305}
-  - component: {fileID: 1509100304}
+  - component: {fileID: 1509100307}
   m_Layer: 7
   m_Name: BreakableTrap (1)
   m_TagString: Untagged
@@ -11377,20 +11363,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 720301224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1509100304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509100302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1509100305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11492,6 +11464,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1509100307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509100302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1513479060
 GameObject:
   m_ObjectHideFlags: 0
@@ -11637,7 +11622,7 @@ GameObject:
   - component: {fileID: 1517156933}
   - component: {fileID: 1517156936}
   - component: {fileID: 1517156935}
-  - component: {fileID: 1517156934}
+  - component: {fileID: 1517156937}
   m_Layer: 7
   m_Name: BreakableTrap (2)
   m_TagString: Untagged
@@ -11660,20 +11645,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 336388032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1517156934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517156932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1517156935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11775,6 +11746,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1517156937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517156932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1535010138
 GameObject:
   m_ObjectHideFlags: 0
@@ -11920,7 +11904,7 @@ GameObject:
   - component: {fileID: 1540444907}
   - component: {fileID: 1540444910}
   - component: {fileID: 1540444909}
-  - component: {fileID: 1540444908}
+  - component: {fileID: 1540444911}
   m_Layer: 7
   m_Name: BreakableTrap (4)
   m_TagString: Untagged
@@ -11943,20 +11927,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 720301224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1540444908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540444906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1540444909
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12058,6 +12028,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1540444911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540444906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1548563175
 GameObject:
   m_ObjectHideFlags: 0
@@ -12462,7 +12445,7 @@ GameObject:
   - component: {fileID: 1634077620}
   - component: {fileID: 1634077623}
   - component: {fileID: 1634077622}
-  - component: {fileID: 1634077621}
+  - component: {fileID: 1634077624}
   m_Layer: 7
   m_Name: BreakableTrap (2)
   m_TagString: Untagged
@@ -12485,20 +12468,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 945968257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1634077621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634077619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1634077622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12600,6 +12569,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1634077624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634077619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1647890172
 GameObject:
   m_ObjectHideFlags: 0
@@ -12773,7 +12755,7 @@ GameObject:
   - component: {fileID: 1686498230}
   - component: {fileID: 1686498233}
   - component: {fileID: 1686498232}
-  - component: {fileID: 1686498231}
+  - component: {fileID: 1686498234}
   m_Layer: 7
   m_Name: BreakableTrap (5)
   m_TagString: Untagged
@@ -12796,20 +12778,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 149181660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1686498231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686498229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1686498232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12911,6 +12879,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1686498234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686498229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1690109169
 GameObject:
   m_ObjectHideFlags: 0
@@ -13257,7 +13238,7 @@ GameObject:
   - component: {fileID: 1740072964}
   - component: {fileID: 1740072967}
   - component: {fileID: 1740072966}
-  - component: {fileID: 1740072965}
+  - component: {fileID: 1740072968}
   m_Layer: 7
   m_Name: BreakableTrap (4)
   m_TagString: Untagged
@@ -13280,20 +13261,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 149181660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1740072965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740072963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1740072966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13395,6 +13362,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1740072968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740072963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1751643997
 GameObject:
   m_ObjectHideFlags: 0
@@ -14883,7 +14863,7 @@ GameObject:
   - component: {fileID: 1929320053}
   - component: {fileID: 1929320056}
   - component: {fileID: 1929320055}
-  - component: {fileID: 1929320054}
+  - component: {fileID: 1929320057}
   m_Layer: 7
   m_Name: BreakableTrap (1)
   m_TagString: Untagged
@@ -14906,20 +14886,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 945968257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1929320054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929320052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1929320055
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15021,6 +14987,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1929320057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929320052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1929750506
 GameObject:
   m_ObjectHideFlags: 0
@@ -15866,7 +15845,7 @@ GameObject:
   - component: {fileID: 2107944371}
   - component: {fileID: 2107944374}
   - component: {fileID: 2107944373}
-  - component: {fileID: 2107944372}
+  - component: {fileID: 2107944375}
   m_Layer: 7
   m_Name: BreakableTrap (4)
   m_TagString: Untagged
@@ -15889,20 +15868,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 945968257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2107944372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107944370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &2107944373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16004,6 +15969,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2107944375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107944370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577388deb087da4cb0f3f308c4cdd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

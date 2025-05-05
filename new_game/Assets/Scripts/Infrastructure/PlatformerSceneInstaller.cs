@@ -5,6 +5,7 @@ public class PlatformerSceneInstaller : MonoInstaller
 {
     [SerializeField] private DialogView _dialogView;
     [SerializeField] private DialogData _dialogData;
+    [SerializeField] private AudioSource _audioSource;
     public override void InstallBindings()
     {
         Container.Bind<EventBus>()
@@ -15,6 +16,10 @@ public class PlatformerSceneInstaller : MonoInstaller
             .FromNew()
             .AsSingle()
             .WithArguments(_dialogView, _dialogData)
+            .NonLazy();
+        Container.Bind<AudioSource>()
+            .FromInstance(_audioSource)
+            .AsSingle()
             .NonLazy();
     }
 

@@ -7718,6 +7718,7 @@ GameObject:
   - component: {fileID: 887859015}
   - component: {fileID: 887859017}
   - component: {fileID: 887859016}
+  - component: {fileID: 887859018}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -7755,6 +7756,7 @@ MonoBehaviour:
   _dialogView: {fileID: 809419470}
   _dialogData: {fileID: 11400000, guid: 3acdb620eb9dbdf41b7f6f73ee6de02c, type: 2}
   _audioSource: {fileID: 479764523}
+  _mono: {fileID: 887859018}
 --- !u!114 &887859017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7787,6 +7789,18 @@ MonoBehaviour:
   _parentNewObjectsUnderSceneContext: 0
   _contractNames: []
   _parentContractNames: []
+--- !u!114 &887859018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887859014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e125c1d3b92ff0b4fbc74403b95066a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &912848590
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,16 +1,26 @@
+using System;
 using UnityEngine;
 
-public class BaseState : MonoBehaviour
+public abstract class BaseState <EState> where EState : Enum
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public EState StateKey { get; private set; }
+    public event Action <EState> OnStateChanged;
+    protected bool IsTransitionStarted;
+    protected BaseState(EState estate)
     {
-        
+        StateKey = estate;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected void ChangeState(EState estate)
     {
-        
+        OnStateChanged?.Invoke(estate);
     }
+
+    public abstract void EnterToState();
+    public abstract void ExitToState();
+    public virtual void UpdateState()
+    {
+
+    }
+
 }

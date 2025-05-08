@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-public class PlatformerSceneInstaller : MonoInstaller
+public class BossFightInstaller : MonoInstaller
 {
     [SerializeField] private DialogView _dialogView;
     [SerializeField] private DialogData _dialogData;

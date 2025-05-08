@@ -13,7 +13,7 @@ public class FireBallCastingState : BaseState<BossStates>
     public override void EnterToState()
     {
         Debug.Log("Огненные шары");
-        _mono.StartCoroutine(Wait(2));
+        IBossSpell spell = GameObject.Instantiate<FireBall>(Resources.Load<FireBall>("Prefabs/FireBall"));
     }
 
     public override void ExitToState()

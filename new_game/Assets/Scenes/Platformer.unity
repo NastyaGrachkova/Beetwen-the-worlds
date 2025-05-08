@@ -7757,6 +7757,7 @@ MonoBehaviour:
   _dialogData: {fileID: 11400000, guid: 3acdb620eb9dbdf41b7f6f73ee6de02c, type: 2}
   _audioSource: {fileID: 479764523}
   _mono: {fileID: 887859018}
+  _isNeedStartDialog: 1
 --- !u!114 &887859017
 MonoBehaviour:
   m_ObjectHideFlags: 0

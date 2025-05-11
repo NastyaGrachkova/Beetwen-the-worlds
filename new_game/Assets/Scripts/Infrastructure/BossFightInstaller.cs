@@ -8,6 +8,8 @@ public class BossFightInstaller : MonoInstaller
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private MonoBehaviourProcess _mono;
     [SerializeField] private bool _isNeedStartDialog;
+    [SerializeField, Space(10)] private LightingCastingState.Setting _lightingSetting;
+    [SerializeField, Space(10)] private FireBallCastingState.Setting _fireballSetting;
     public override void InstallBindings()
     {
         Container.Bind<EventBus>()
@@ -26,7 +28,7 @@ public class BossFightInstaller : MonoInstaller
         Container.Bind<BossStateMachine>()
             .FromNew()
             .AsSingle()
-            .WithArguments(_mono)
+            .WithArguments(_mono, _fireballSetting, _lightingSetting)
             .NonLazy();
     }
 

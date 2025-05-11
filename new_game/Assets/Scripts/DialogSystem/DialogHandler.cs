@@ -24,10 +24,8 @@ public class DialogHandler
         _dialogIndex = 0;
         _dialogView.Scip.onClick.RemoveAllListeners();
 
-        Debug.Log("error");
         _dialogView.Scip.onClick.AddListener(() =>
         {
-            Debug.Log("button start");
             if (_dialogIndex < _dialogData.DialogElements.Count)
                 ShowElementFromDialogData(_dialogData.DialogElements[_dialogIndex], _dialogData.DialogElements.Count);
             else

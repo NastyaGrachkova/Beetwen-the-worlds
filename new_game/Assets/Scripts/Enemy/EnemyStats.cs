@@ -8,6 +8,12 @@ public class EnemyStats : MonoBehaviour, IDamageAble
     [SerializeField] private Slider _slider;
     private Coroutine _coroutine;
 
+    private void Awake()
+    {
+        _slider.maxValue = Health;
+        _slider.value = Health;
+    }
+
     public void GetDamage(int damageValue)
     {
         _slider.gameObject.SetActive(true);

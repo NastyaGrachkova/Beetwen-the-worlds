@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrailRenderer: {fileID: 4979425245535611591}
+  AttackRadius: 1
+  AttackValue: 10
 --- !u!96 &4979425245535611591
 TrailRenderer:
   serializedVersion: 3

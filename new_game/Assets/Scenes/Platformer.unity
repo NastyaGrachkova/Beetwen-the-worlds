@@ -14563,7 +14563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d61a436ee2c9a847ae7c8c572378383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Hub
+  nextSceneName: Boss
   totalCoins: 6
 --- !u!58 &1725727835
 CircleCollider2D:

@@ -41,9 +41,16 @@ public class FireBallCastingState : BaseState<BossStates>
         {
             FireBall spell = GameObject.Instantiate<FireBall>(Resources.Load<FireBall>("Prefabs/FireBall"));
             Transform positionToStart = _fireballSetting.CastingPositions[Random.Range(0, _fireballSetting.CastingPositions.Count)];
-            spell.transform.position = positionToStart.position;
-            spell.InicializeFireBall(_fireballSetting.Stats.transform.position);
-            yield return _sleep;
+            if (positionToStart != null)
+            {
+                spell.transform.position = positionToStart.position;
+                spell.InicializeFireBall(_fireballSetting.Stats.transform.position);
+                yield return _sleep;
+            }
+            else
+            {
+                yield return null;
+            }
         }
     }
 

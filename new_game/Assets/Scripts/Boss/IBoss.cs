@@ -12,6 +12,6 @@ public class IBoss : EnemyStats
     }
     private void OnDestroy()
     {
-        _stateMachine.DisableMachine(); 
+        //_stateMachine.DisableMachine(); 
     }
 }

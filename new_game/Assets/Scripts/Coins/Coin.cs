@@ -4,7 +4,7 @@ using Zenject;
 public class Coin : MonoBehaviour
 {
     [SerializeField] private int coinValue = 1;
-    private AudioSource _audioSource;
+    protected AudioSource _audioSource;
     [SerializeField] private AudioClip _audioClip;
 
     [Inject]
@@ -18,7 +18,10 @@ public class Coin : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerStats playerStats = collision.GetComponent<PlayerStats>();
-            _audioSource.PlayOneShot(_audioClip);
+            if (_audioSource != null)
+            {
+                _audioSource.PlayOneShot(_audioClip);
+            }
             if (playerStats != null)
             {
                 playerStats.AddCoins(coinValue);

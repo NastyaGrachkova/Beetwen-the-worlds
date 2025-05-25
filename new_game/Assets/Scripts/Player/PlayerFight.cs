@@ -22,7 +22,7 @@ public class PlayerFight : MonoBehaviour
     {
         if (_isDialogActivated) 
             return;
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.C))
         {
             if (Physics2D.OverlapBox(_atackPoint.position, new Vector2(1, 1), 0, _layerMask))
             {

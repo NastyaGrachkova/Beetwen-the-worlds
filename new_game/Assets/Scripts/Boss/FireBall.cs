@@ -18,7 +18,7 @@ public class FireBall : MonoBehaviour, IBossSpell
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IDamageAble player))
+        if (collision.TryGetComponent(out IDamageAble player) && collision.gameObject.layer == 6)
         {
             player.GetDamage(_damageValue);
             Destroy(gameObject);

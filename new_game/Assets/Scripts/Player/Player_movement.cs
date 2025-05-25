@@ -86,14 +86,14 @@ public class Player_movement : MonoBehaviour
             transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
 
-        if (Input.GetButtonDown("Jump") && _isOnGround)
+        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W)) && _isOnGround)
         {
             _anim.SetTrigger(_jumpState);
             _anim.SetBool(_onGroundState, false);
             _isOnGround = false;
             _rigidbody2D.AddForce(new Vector2(0, _playerStats.JumpForce), ForceMode2D.Impulse);
         }
-        else if (Input.GetButtonDown("Jump") && !_isUseDoubleJump)
+        else if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W)) && !_isUseDoubleJump)
         {
             _anim.SetTrigger(_jumpState);
             _rigidbody2D.AddForce(new Vector2(0, _playerStats.JumpForce), ForceMode2D.Impulse);

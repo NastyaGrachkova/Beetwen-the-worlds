@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: DialogDataPlatformer
   m_EditorClassIdentifier: 
   DialogElements:
+  - PortretSprite: {fileID: -3477933660911678291, guid: 806ebf974ac45584884ed4536678f7ee, type: 3}
+    DialogText: "\u041F\u0440\u0438\u0432\u0435\u0442, \u0421\u0430\u0448\u0430...
+      \u042F \u0437\u0434\u0435\u0441\u044C, \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u043C\u043E\u0447\u044C
+      \u0442\u0435\u0431\u0435."
   - PortretSprite: {fileID: -2576023137440582333, guid: a96a6615cde513449946a878c8244645, type: 3}
-    DialogText: 'Hello! '
-  - PortretSprite: {fileID: 74226119664163067, guid: fd8b5d57fcb5c334597cf1e0c77a258f, type: 3}
-    DialogText: 'Good afternoon! '
+    DialogText: "\u041A\u0442\u043E \u0442\u044B?"
+  - PortretSprite: {fileID: -3477933660911678291, guid: 806ebf974ac45584884ed4536678f7ee, type: 3}
+    DialogText: "\u042F \u0442\u0432\u043E\u0439 \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A.
+      \u042F \u043F\u0440\u043E\u0439\u0434\u0443 \u0432\u0441\u0435 \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u044F
+      \u0432\u043C\u0435\u0441\u0442\u0435 \u0441 \u0442\u043E\u0431\u043E\u0439."

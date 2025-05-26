@@ -23,11 +23,6 @@ public class PlatformerSceneInstaller : MonoInstaller
             .FromInstance(_audioSource)
             .AsSingle()
             .NonLazy();
-        //Container.Bind<BossStateMachine>()
-        //    .FromNew()
-        //    .AsSingle()
-        //    .WithArguments(_mono)
-        //    .NonLazy();
     }
 
     public override void Start()

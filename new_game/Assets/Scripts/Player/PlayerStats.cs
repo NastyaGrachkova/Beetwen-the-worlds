@@ -13,6 +13,8 @@ public class PlayerStats : MonoBehaviour, IDamageAble
     public float SpeedMovement;
     public float Damage;
     public int PlayerDamage;
+    [SerializeField] private AudioSource gameOverMusicSource;
+
 
     // Новая переменная для монет
     public int CoinCount { get; private set; } = 0; 
@@ -53,6 +55,8 @@ public class PlayerStats : MonoBehaviour, IDamageAble
         Debug.Log("Здоровье: " + Health);
     }
 
+    private AudioSource[] allAudioSources;
+
     private void ShowGameOver()
     {
         // Отображаем Game Over Image
@@ -60,10 +64,30 @@ public class PlayerStats : MonoBehaviour, IDamageAble
         {
             gameOverImage.SetActive(true);
         }
-        Debug.Log("Игра окончена!");
+
+        // Находим все аудиоисточники (один раз, если хотите, можно в Start)
+        allAudioSources = UnityEngine.Object.FindObjectsByType<AudioSource>(UnityEngine.FindObjectsSortMode.None);
+
+        // Отключаем все звуки кроме музыки GameOver
+        foreach (AudioSource source in allAudioSources)
+        {
+            if (source != gameOverMusicSource)
+            {
+                source.Pause(); // или Stop(), если хотите полностью остановить
+            }
+        }
+
+        // Запускаем музыку GameOver
+        if (gameOverMusicSource != null)
+        {
+            gameOverMusicSource.Play();
+        }
+
+
         // Остановка игры
-        Time.timeScale = 0; 
+        Time.timeScale = 0;
     }
+
 
     public void ReturnToMainMenu()
     {

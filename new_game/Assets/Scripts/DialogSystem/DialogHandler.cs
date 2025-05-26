@@ -38,6 +38,7 @@ public class DialogHandler
 
         ShowElementFromDialogData(_dialogData.DialogElements[_dialogIndex], _dialogData.DialogElements.Count);
     }
+
     public void StartDialog(DialogData dialogData)
     {
         _eventBus.OnDialogStarted?.Invoke();
@@ -83,4 +84,5 @@ public class DialogHandler
         }
 
     }
+
 }

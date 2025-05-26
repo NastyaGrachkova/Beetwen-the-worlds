@@ -18824,7 +18824,6 @@ GameObject:
   - component: {fileID: 1087844447}
   - component: {fileID: 1087844446}
   - component: {fileID: 1087844445}
-  - component: {fileID: 1087844444}
   m_Layer: 0
   m_Name: SlowingTrap (1)
   m_TagString: Untagged
@@ -18847,20 +18846,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 492436860}
   m_LocalEulerAnglesHint: {x: 0.167, y: -0.565, z: 360.382}
---- !u!114 &1087844444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087844442}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1087844445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19195,7 +19180,6 @@ GameObject:
   - component: {fileID: 1146809373}
   - component: {fileID: 1146809376}
   - component: {fileID: 1146809375}
-  - component: {fileID: 1146809377}
   m_Layer: 0
   m_Name: SlowingTrap
   m_TagString: Untagged
@@ -19333,20 +19317,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slowingDuration: 10
   _slowingValue: 5
---- !u!114 &1146809377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146809372}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!1 &1151461552
 GameObject:
   m_ObjectHideFlags: 0
@@ -21383,7 +21353,6 @@ GameObject:
   - component: {fileID: 1325375136}
   - component: {fileID: 1325375135}
   - component: {fileID: 1325375134}
-  - component: {fileID: 1325375133}
   m_Layer: 0
   m_Name: SlowingTrap (2)
   m_TagString: Untagged
@@ -21406,20 +21375,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 492436860}
   m_LocalEulerAnglesHint: {x: 0.167, y: -0.565, z: 360.382}
---- !u!114 &1325375133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325375131}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33259730aaab1c546abf6135c427c31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  _slider: {fileID: 0}
 --- !u!61 &1325375134
 BoxCollider2D:
   m_ObjectHideFlags: 0
